@@ -28,6 +28,8 @@ if cd "$PASSLOCK_DIR"; then
   echo "To use 'passlock' from anywhere, add this to your shell config:"
   echo ""
   echo "    export PATH=\"\$HOME/.passlock/bin:\$PATH\""
+  echo "or run: "
+  echo "    echo 'export PATH=\"\$HOME/.passlock/bin:\$PATH\"' >> ~/.zshrc "
   echo ""
   echo "Then restart your shell"
 else
