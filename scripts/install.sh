@@ -3,6 +3,8 @@
 set -e
 PASSLOCK_DIR="$HOME/.passlock"
 
+mkdir -p "$PASSLOCK_DIR"
+
 if [ -d "$PASSLOCK_DIR/.git" ]; then
   echo "Updating passlock..."
   git -C "$PASSLOCK_DIR" pull
