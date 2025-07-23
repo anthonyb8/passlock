@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 set -e
+
 PASSLOCK_DIR="$HOME/.passlock"
+REPO_URL="https://github.com/anthonyb8/passlock.git"
 
 mkdir -p "$PASSLOCK_DIR"
 
@@ -10,6 +12,8 @@ if [ -d "$PASSLOCK_DIR/.git" ]; then
   git -C "$PASSLOCK_DIR" pull
 else
   echo "Cloning passlock..."
+  rm -rf "$PASSLOCK_DIR" # clean out any old directories
+  git clone "$REPO_URL" "$PASSLOCK_DIR"
 fi
 
 if cd "$PASSLOCK_DIR"; then
@@ -28,4 +32,5 @@ if cd "$PASSLOCK_DIR"; then
   echo "Then restart your shell"
 else
   echo "Error finding passlock directory"
+  exit 1
 fi
