@@ -1,0 +1,27 @@
+[package]
+name = "passlock"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aes-gcm = "0.10.3"
+clap = { version = "4.5.41", features = ["derive"] }
+rpassword = "7.4.0"
+serde = {version="1.0.219", features=["derive"]}
+serde_json = "1.0.141"
+sha2 = "0.10.9"
+clap_builder = "4.5.41"
+thiserror = "2.0.12"
+homedir = "0.3.6"
+anyhow = "1.0.98"
+arboard = "3.6.0"
+inquire = "0.7.5"
+hex-literal = "1.0.0"
+hex = "0.4.3"
+pbkdf2 = "0.12.2"           
+rand = "0.9.2"              
+base64 = "0.22.1"  
+
+[lib]
+name="passlock_lib"
+path="src/lib.rs"
