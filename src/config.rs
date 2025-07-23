@@ -23,11 +23,16 @@ pub struct Config {
 impl Config {
     pub fn new() -> Result<Config> {
         let clipboard = Clipboard::new().expect("Clipboard not available");
-        let file = home_dir()
-            .ok_or(Error::HomeNotFoundError)?
-            .join(".passlock.json");
 
-        Config::check_file(&file)?;
+        let file = if !cfg!(debug_assertions) {
+            home_dir()
+                .ok_or(Error::HomeNotFoundError)?
+                .join(".passlock/.vault.json")
+        } else {
+            std::env::current_dir()?.join("passlock.json")
+        };
+
+        Self::check_file(&file)?;
 
         Ok(Config { file, clipboard })
     }
