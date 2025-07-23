@@ -1,10 +1,8 @@
 # 🔐 Passlock
 
-**Passlock** is a simple, secure CLI tool for managing your passwords locally.  
-It helps you store, encrypt, and retrieve credentials without relying on the cloud.
+**Passlock** is a simple, secure CLI tool for managing your passwords locally. It helps you store, encrypt, and retrieve credentials without relying on the cloud.
 
-Passlock isn't a password manager in the traditional sense—it’s a lightweight,  
-command-line vault designed for developers and privacy-conscious users.
+Passlock isn't a password manager in the traditional sense—it’s a lightweight, command-line vault designed for developers and privacy-conscious users.
 
 ## ✨ Features
 
